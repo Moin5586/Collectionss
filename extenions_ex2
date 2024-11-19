@@ -1,0 +1,35 @@
+static void main(srting[] args)
+{
+
+
+    Console.WriteLine("enter the value:");
+    int n = Convert.ToInt32(Console.ReadLine());
+    bool res = n.IsPalindrome();
+    Console.WriteLine(res);
+    Console.ReadLine();
+
+
+
+
+}
+public static class Extension
+{
+    public static bool IsPalindrome(this int n)
+    {
+
+        int rev = 0;
+        for (int i = n; i > 0; i / 10)
+        {
+            int digit = i % 10;
+            rev = rev * 10 + digit;
+        }
+        if (rev == n)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
