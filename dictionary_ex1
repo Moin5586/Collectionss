@@ -1,0 +1,47 @@
+static void Main(string[] args)
+{
+    Dictionary<string, int> studentMarks = new Dictionary<string, int>();
+    studentMarks.Add("moin", 605);
+    studentMarks.Add("imran", 555);
+    studentMarks.Add("nnooon,", 345);
+    studentMarks.Add("sallu", 500);
+    studentMarks.Add("ram", 345);
+    Console.WriteLine("imran marks are:" + studentMarks["imran"]);
+    Console.WriteLine("sallu marks are:" + studentMarks["sallu"]);
+    Console.WriteLine("ram marks are:" + studentMarks["ram"]);
+    Console.WriteLine("moin marks are:" + studentMarks["moin"]);
+    Console.WriteLine("\n");
+    Console.WriteLine("\n");
+
+
+    if (studentMarks.ContainsKey("imran"))
+    {
+        Console.WriteLine("imran's marks are:" + studentMarks["imran"]);
+
+
+    }
+
+    else
+    {
+        Console.WriteLine("imran does not include in this group");
+    }
+    Console.WriteLine("\n");
+    Console.WriteLine("total student in the group are:");
+    foreach (var marks in studentMarks)
+    {
+        Console.WriteLine(marks);
+
+    }
+    Console.WriteLine("totalcount  students in group are:" + studentMarks.Count);
+    Console.ReadLine();
+    //try to get the value of specified key using trgetvalue
+    if(studentMarks.TryGetValue("imran" out int))
+    {
+        Console.WriteLine("value is :" + studentMarks["imran"]);
+    }
+    else
+    {
+        Console.WriteLine("imran information not found");
+    }
+
+}
