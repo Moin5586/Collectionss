@@ -1,0 +1,38 @@
+static void Main()
+{
+
+    IList<int> numbers = new List<int>();
+    numbers.Add(10);
+    numbers.Add(20);
+    numbers.Add(49);
+    numbers.Add(50);
+    numbers.Add(60);
+    Console.WriteLine("total elements are:");
+    foreach (int elements in numbers)
+    {
+        Console.WriteLine(elements);
+    }
+
+    numbers.Remove(20);
+    Console.WriteLine("after removing:");
+    foreach (int elements in numbers)
+    {
+        Console.WriteLine(elements);
+    }
+    numbers[3] = 70;
+    numbers.Insert(2, 80); numbers.RemoveAt[3];
+    Console.WriteLine("after all modification:");
+    foreach (int elements in numbers)
+    {
+        Console.WriteLine(elements);
+    }
+    Console.WriteLine("after modifying total count of numbers:" + numbers.Count);
+    if (numbers.Contains(80))
+    {
+        Console.WriteLine("contains");
+    }
+    int index = numbers.IndexOf(10);
+    Console.WriteLine("index of 10 is:" + index);
+    Console.ReadLine();
+
+}
