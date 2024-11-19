@@ -1,0 +1,41 @@
+static void Main(string[] args)
+{
+    Dictionary<String, int> employeeAge = new Dictionary<string, int>();
+    employeeAge.Add("moin", 22);
+    employeeAge.Add("madhu", 22);
+    employeeAge.Add("mangunath", 24);
+    employeeAge.Add("ahmad", 15);
+    employeeAge.Add("nikhil", 10);
+    employeeAge.Add("sohel", 35);
+
+    Console.WriteLine("age of moin:" + employeeAge["moin"]);
+    Console.WriteLine("");
+    employeeAge.Remove("madhu");
+    employeeAge.Reverse();
+    Console.WriteLine("after all ages of employess are:");
+    foreach (var val_age in employeeAge)
+    {
+        Console.WriteLine(val_age);
+    }
+    Console.WriteLine("age of sohel is:" + employeeAge["sohel"]);
+    if (employeeAge.TryGetValue("mangunath", out int age))
+    {
+        Console.WriteLine("");
+        Console.WriteLine("manja'sage is :" + age);
+
+    }
+    else
+    {
+        Console.WriteLine("not found");
+
+    }
+    Console.WriteLine("");
+    Console.WriteLine("after updating emplpyee age is:");
+    foreach (var val_age1in in employeeAge)
+    {
+        Console.WriteLine(val_age1in);
+    }
+    Console.WriteLine("");
+    Console.WriteLine("total count is:" + employeeAge.Count);
+    Console.ReadLine();
+}
