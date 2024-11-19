@@ -1,0 +1,31 @@
+static void main(string[] args)
+{
+
+
+    IList<string> students = new List<string>();
+    students.Add("ankit");
+    students.Add("prajwal");
+    students.Add("manjunath");
+    students.Add("avinash");
+    students.Add("madhusudhan");
+    students.Add("nikil");
+    students.Add("likith");
+    students.Add("harsha");
+    students.Add("ahmad");
+    Console.WriteLine("names of the students are:");
+    foreach (string names in students)
+    {
+        Console.WriteLine(names);
+
+    }
+    students.Insert(0, "moin");
+    students[2] = "nidhi";
+    int count = students.Count();
+    Console.WriteLine("total count of students is :", count);
+    bool contains = students.Contains("nikil");
+    Console.WriteLine(contains);
+    int index = students.IndexOf("ahmad");
+    Console.WriteLine("ahmad is present at index:", index);
+
+    Console.ReadLine();
+}
