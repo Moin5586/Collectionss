@@ -1,0 +1,14 @@
+public static async Task Main(string args)
+        {
+            Console.WriteLine("start calculation...");
+            int result = await calculateSum(10, 20);
+            Console.WriteLine($"result:{result}");
+            Console.WriteLine("stop");
+        }
+        public static async Task<int> calculateSum(int a,int b)
+        {
+            Console.WriteLine("calculating sum..");
+            await Task.Delay(2000);
+            return (a + b);
+
+        }
