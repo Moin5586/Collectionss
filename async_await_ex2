@@ -1,0 +1,16 @@
+public static async Task Main(string[] args)//async main method
+{
+    Console.WriteLine("start:");
+    string result = await Fetchvinfo();
+    Console.WriteLine($"result:{result}");
+    Console.WriteLine("end");
+    Console.ReadLine();
+
+}
+public static async Task<string> Fetchvinfo()
+{
+    Console.WriteLine("fetching");
+    await Task.Delay(2000);
+    Console.WriteLine("data fetched");
+    return "hello world";
+}
