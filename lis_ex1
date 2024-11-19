@@ -1,0 +1,21 @@
+ static void main(string[] args)
+ {
+     
+         
+                     List<string> bookstore = new List<string>();
+                     bookstore.Add("books");
+                     bookstore.Add("pen,pencils");
+                     bookstore.Add("stationary item");
+                     bookstore.Add("other items");
+                     foreach (string items in bookstore)
+                     {
+                         Console.WriteLine(items);
+                     }
+                     if (bookstore.Contains("stationary item"))
+                     {
+                         Console.WriteLine("this store also contains stationary items");
+                     }
+                     Console.WriteLine(bookstore.Remove("pen,pencils"));
+                     Console.ReadLine();
+
+}
